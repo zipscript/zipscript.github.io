@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://1password.com/favicon.ico">
+    <script src="https://zipscript.github.io/script/genpass.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        .content{
+            background: rgb(241, 241, 241);
+            height:400px;
+            width:400px;
+            border-radius:10px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin-top:140px;
+        }
+        input{
+            display: block;
+           
+            margin: auto;
+            width:280px;
+            height:35px;
+            border-radius:5px;
+            border: none;
+             outline: none;
+            padding-left:10px;
+        }
+        button{
+            display: block;
+            text-align: center;
+            margin: auto;
+            width:290px;
+            height:35px;
+            color: white;
+            background: #2da44e;
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            border: none;
+            border-radius:8px;
+            margin-top:30px;
+            
+        }
+
+        h1{
+            font-family: sans-serif;
+            font-weight: 500;
+            padding-top:50px;
+        }
+        .m{
+              color: white;
+              font-family: monospace;
+              width:500px;
+              padding-top:40px;
+              display: block;
+              margin: auto;
+              text-align: center;
+              font-size:21px;
+        }
+        .tit{
+            font-family: monospace;
+            display: block;
+            margin: auto;
+            font-size:35px;
+            text-align: center;
+        }
+        .htit{
+            font-family: arial;
+            font-weight: 800;
+            display: block;
+            margin: auto;
+            color: white;
+            font-size:35px;
+            text-align: center;
+        }
+        .p{
+            font-family: arial;
+            width:400px;
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        #len{
+            width:150px;
+            height:30px;
+            margin-top:20px;
+            border-radius: 4px;
+            color:white;
+            background:  #59a1ff;
+            border:none
+        }
+        .header{
+            height:300px;
+            background: #414e71;
+        }
+        @media screen and (max-width:500px) {
+            .content{
+                width:350px;
+            }
+            input{
+                width:250px;
+            }
+            button{
+                width:250px;
+            }
+            img{
+                width: 240px;
+            }
+            .htit{
+                font-size:27px;
+            }
+            .tit{
+                font-size:29px;
+
+            }
+            .p{
+                width:350px;
+            }
+            .m{
+                font-size:18px;
+                width:380px;
+            }
+        }
+        @media screen and (max-width:390px) {
+            .content{
+                width:325px;
+            }
+            input{
+                width:250px;
+            }
+            button{
+                width:250px;
+            }
+            .htit{
+                font-size:25px;
+            }
+            .m{
+                font-size:15px;
+                width:300px;
+            }
+        }
+        @media screen and (max-width:350px) {
+            .content{
+                width:310px;
+            }
+            input{
+                width:230px;
+                height: 30px;
+            }
+            button{
+                width:230px;
+                height:30px;
+            }
+            img{
+                width:170px;
+            }
+            .htit{
+                font-size:20px;
+            }
+            .tit{
+                font-size:25px;
+            }
+            .p{
+                width:250px;
+            }
+            .m{
+                font-size:13px;
+                width:250px;
+
+            }
+            .header{
+                height:250px;
+            }
+        }
+        @media screen and (max-width:330px) {
+            .content{
+                width:225px;
+                height:380px;
+            }
+            input{
+                width:150px;
+            }
+            button{
+                width:150px;
+            }
+            h1{
+                font-size:25px;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            #len{
+                width:110px;
+            }
+        }
+        img{
+            display: block;
+            text-align: center;
+            margin: auto;
+            margin-top:100px;
+        }
+        .footer{
+            height:200px;
+            background: #414e71;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+      <h1 class="htit">STRONG PASSWORDS</h1>
+      <p class="m">
+        Вы не можете предотвратить утечку данных, но использование разных паролей повсюду может значительно минимизировать их влияние.
+      </p>
+    </div>
+   
+    <div class="content">
+        <h1>GENPASS</h1>
+        <br><br>
+        <input id="pass" type="text">
+        <button onclick="gen()">GENERATE</button>
+        <select name="length" id="len">
+            <option value="" >Password Length</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+            <option value="110">110</option>
+            <option value="120">120</option>
+            <option value="130">130</option>
+            <option value="140">140</option>
+            <option value="150">150</option>
+            <option value="160">160</option>
+            <option value="170">170</option>
+            <option value="180">180</option>
+            <option value="190">190</option>
+            <option value="200">200</option>
+        </select>
+
+    </div>
+    <div class="rek">
+        <img src="https://1password.com/img/haveibeenpwned/two-fa.b7bc4bc52fff9c7b7501453f7601e65a.svg" alt="">
+        <h1 class="tit">Password security</h1>
+        <br>
+        <p class="p">Лучший способ защитить себя в сети - использовать надежные уникальные пароли для каждой учетной записи. Таким образом, даже если ваши данные для одного сайта будут скомпрометированы, другие останутся в безопасности.</p>
+    </div>
+    <br><br><br>
+    <div class="footer">
+
+    </div>
+</body>
+<script>
+function gen(){
+    
+    var passlen=document.getElementById('len').value;
+    if(passlen == ''){
+        document.getElementById('pass').value=genpass(30);
+    }
+    else{
+        document.getElementById('pass').value=genpass(passlen);
+    }
+}
+</script>
+</html>
