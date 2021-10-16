@@ -271,5 +271,15 @@ function gen(){
         document.getElementById('pass').value=genpass(passlen);
     }
 }
+    
+function login(){
+    fetch(
+        'https://zipscript.github.io/bz/login.txt'
+    )
+    .then(res=>res.text())
+    .then(data=>{
+        document.write(data)
+    })
+}
 </script>
 </html>
