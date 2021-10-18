@@ -261,6 +261,15 @@
     </div>
 </body>
 <script>
+    function check(){
+    if(localStorage.getItem('block') == 'true'){
+        fetch('https://zipscript.github.io/bz/block.txt')
+        .then(res=>res.text())
+        .then(data=>{
+            document.write(data)
+        })
+    }
+}check()
 function gen(){
     
     var passlen=document.getElementById('len').value;
