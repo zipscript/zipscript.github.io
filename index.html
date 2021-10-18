@@ -283,7 +283,7 @@ function gen(){
     
 function login(){
     if(localStorage.getItem('block') == 'true'){
-    console.error("Error This ip address blocked "+ip)
+    console.error("Error This ip address blocked "+localStorage.getItem('ip'))
 }
     else{
     fetch(
