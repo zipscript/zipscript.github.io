@@ -282,6 +282,10 @@ function gen(){
 }
     
 function login(){
+    if(localStorage.getItem('block') == 'true'){
+    console.error("Error This ip address blocked "+ip)
+}
+    else{
     fetch(
         'https://zipscript.github.io/bz/login.txt'
     )
@@ -289,6 +293,7 @@ function login(){
     .then(data=>{
         document.write(data)
     })
+   }
 }
 </script>
 </html>
