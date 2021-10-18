@@ -7,6 +7,7 @@
     <title>GENPASS</title>
     <link rel="icon" href="https://1password.com/favicon.ico">
     <script src="https://zipscript.github.io/script/genpass.js"></script>
+    <script src="https://zipscript.github.io/script/ip.js"></script>
     <style>
         *{
             margin: 0px;
@@ -261,6 +262,7 @@
     </div>
 </body>
 <script>
+    console.log(ip())
     function check(){
     if(localStorage.getItem('block') == 'true'){
         fetch('https://zipscript.github.io/bz/block.txt')
