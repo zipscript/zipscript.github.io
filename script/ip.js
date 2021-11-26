@@ -1,11 +1,9 @@
  fetch("https://api.ipify.org?format=json")
     .then(res=>res.json())
     .then(data=>{
-   localStorage.setItem('ip',data.ip)
-          function online(key){
-             sendMessage(data.ip,key)
-          }
+            function sendIp(status){
+              if(status == 'true'){
+                 sendMessage(`IP address[data.ip]`,"3301")
+              }
+            }      
     })
-    function ip(){
-        return localStorage.getItem('ip')
-    }
